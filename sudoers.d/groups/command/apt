@@ -1,0 +1,8 @@
+# apt* => NOPASSWD
+	# apt-get => APT_GET
+		Cmnd_Alias APT_GET = /usr/bin/apt-get
+		%aptget ALL=(ALL:ALL) NOPASSWD: APT_GET
+
+	# apt => APT
+		Cmnd_Alias APT = /usr/bin/apt
+		%apt ALL=(ALL:ALL) NOPASSWD: APT

@@ -1,0 +1,4 @@
+# pacman => NOPASSWD
+ # PACMAN => pacman
+  Cmnd_Alias PACMAN = /usr/bin/pacman
+  %pacman ALL=(ALL:ALL) NOPASSWD: PACMAN

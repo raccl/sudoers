@@ -1,0 +1,4 @@
+# npm => NOPASSWD
+	# NPM => npm
+		Cmnd_Alias NPM = /usr/bin/npm
+		%npm ALL=(ALL:ALL) NOPASSWD: NPM

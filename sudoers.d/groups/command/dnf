@@ -1,0 +1,4 @@
+# dnf* => NOPASSWD
+	# dnf => DNF
+		Cmnd_Alias DNF = /usr/bin/dnf
+		%dnf ALL=(ALL:ALL) NOPASSWD: DNF

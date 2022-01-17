@@ -1,0 +1,4 @@
+# yum* => NOPASSWD
+	# yum => YUM
+		Cmnd_Alias YUM = /usr/bin/yum
+		%yum ALL=(ALL:ALL) NOPASSWD: YUM
