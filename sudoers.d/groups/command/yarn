@@ -1,4 +1,4 @@
 # yarn => NOPASSWD
  # YARN => yarn
-  Cmnd_Alias YARN = /usr/bin/yarn
-  %yarn ALL=(ALL:ALL) NOPASSWD: YARN
+  Cmnd_Alias YARN_CMD=/usr/bin/yarn
+  %yarn ALL=(ALL:ALL) NOPASSWD: YARN_CMD
