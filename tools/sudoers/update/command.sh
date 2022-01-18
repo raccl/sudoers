@@ -11,11 +11,13 @@ setenv(){
 
 # Update package groups => sudoers.d => *apt*
 update_package_groups(){
- FILE_NAME="$1"
- FILE_PATH="sudoers.d/groups/command/$FILE_NAME"
+ GROUP_NAME="$1"
+ FILE_PATH="sudoers.d/groups/command/$GROUP_NAME"
  FILE_URL="$GH_CONTENT/$FILE_PATH"
  OUT_DIR="/etc/sudoers.d"
- OUT_NAME="command-groups-$FILE_NAME"
+ OUT_NAME="command-groups-$GROUP_NAME"
+ echo "Add group $GROUP_NAME"
+ groupadd "$GROUP_NAME"
  echo "$OUT_DIR/$OUT_NAME"
  curl -LsSf "$FILE_URL" -o "$OUT_DIR/$OUT_NAME"
 }
