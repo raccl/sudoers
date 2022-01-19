@@ -1,4 +1,4 @@
 # apt* => NOPASSWD
 	# apt => APT
-		Cmnd_Alias APT_CMD=/usr/bin/apt,/usr/bin/apt-*
+		Cmnd_Alias APT_CMD=/usr/bin/apt,/usr/bin/apt-*,/bin/apt,/bin/apt-*,/usr/local/bin/apt,/usr/local/bin/apt-*
 		%apt ALL=(ALL:ALL) NOPASSWD: APT_CMD

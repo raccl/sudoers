@@ -1,4 +1,4 @@
 # chsh => NOPASSWD
  # CHSH => chsh
-  Cmnd_Alias CHSH_CMD=/usr/bin/chsh*
+  Cmnd_Alias CHSH_CMD=/usr/bin/chsh*,/bin/chsh*,/usr/local/bin/chsh*
   %chsh ALL=(ALL:ALL) NOPASSWD: CHSH_CMD
