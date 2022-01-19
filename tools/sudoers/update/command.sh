@@ -17,7 +17,7 @@ update_package_groups(){
  OUT_DIR="/etc/sudoers.d"
  OUT_NAME="command-groups-$GROUP_NAME"
  echo "Add group $GROUP_NAME"
- sudo groupadd "$GROUP_NAME"
+ sudo groupadd "$GROUP_NAME" || true
  echo "$OUT_DIR/$OUT_NAME"
  sudo curl -LsSf "$FILE_URL" -o "$OUT_DIR/$OUT_NAME"
 }
