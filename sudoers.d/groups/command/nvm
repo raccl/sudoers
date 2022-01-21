@@ -1,0 +1,4 @@
+# nvm => NOPASSWD
+	# NVM => nvm
+		Cmnd_Alias NVM_CMD=/usr/bin/nvm,/bin/nvm,/usr/local/bin/nvm
+		%npm ALL=(ALL:ALL) NOPASSWD: NVM_CMD

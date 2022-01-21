@@ -25,6 +25,7 @@ setenv
 update_package_groups "apt"
 update_package_groups "chsh"
 update_package_groups "npm"
+update_package_groups "nvm"
 update_package_groups "pacman"
 update_package_groups "yarn"
 update_package_groups "yum"
