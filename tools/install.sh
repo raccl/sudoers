@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Set environment variables
 setenv(){
  GH_REQ_PROT="https"
