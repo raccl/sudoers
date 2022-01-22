@@ -1,12 +1,12 @@
 #!/bin/bash
 # Set environment variables
 setenv(){
- GH_REQ_PROT="https"
- GH_BASE_HOST="raw.githubusercontent.com"
- GH_ORG="raccl"
- GH_REPO="sudoers"
- GH_BRANCH="master"
- export GH_CONTENT="$GH_REQ_PROT://$GH_BASE_HOST/$GH_ORG/$GH_REPO/$GH_BRANCH"
+ local GH_REQ_PROT="https"
+ local GH_BASE_HOST="raw.githubusercontent.com"
+ local GH_ORG="raccl"
+ local GH_REPO="sudoers"
+ local GH_BRANCH="master"
+ GH_CONTENT="$GH_REQ_PROT://$GH_BASE_HOST/$GH_ORG/$GH_REPO/$GH_BRANCH"
 }
 
 no_pw_sudo(){
@@ -18,9 +18,9 @@ no_pw_sudo(){
 update_package_groups(){
  GROUP_NAME="$1"
  FILE_PATH="sudoers.d/groups/command/$GROUP_NAME"
+ OUT_NAME="command-groups-$GROUP_NAME"
  FILE_URL="$GH_CONTENT/$FILE_PATH"
  OUT_DIR="/etc/sudoers.d"
- OUT_NAME="command-groups-$GROUP_NAME"
  echo "Add group $GROUP_NAME"
  no_pw_sudo 'groupadd "$GROUP_NAME" || true'
  echo "$OUT_DIR/$OUT_NAME"
