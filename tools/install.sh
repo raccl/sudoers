@@ -6,14 +6,14 @@ setenv(){
  local GH_ORG="raccl"
  local GH_REPO="sudoers"
  local GH_BRANCH="master"
- export "GH_CONTENT"="$GH_REQ_PROT://$GH_BASE_HOST/$GH_ORG/$GH_REPO/$GH_BRANCH"
+	GH_CONTENT="${GH_REQ_PROT}://${GH_BASE_HOST}/${GH_ORG}/${GH_REPO}/${GH_BRANCH}"
 }
 
 update(){
  # Update sudoers.d/*
 	local FILE_PATH="tools/sudoers/update.sh"
  local GH_REQ_URL="$GH_CONTENT/$FILE_PATH"
- sh -c "$(curl -LsSf $GH_REQ_URL)"
+ curl -H 'Cache-Control: no-cache' -LsSf $GH_REQ_URL | sh
 }
 
 
