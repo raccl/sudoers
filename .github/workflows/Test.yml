@@ -1,0 +1,18 @@
+on: 
+  workflow_dispatch:
+  push: 
+  pull_request:
+
+name: Test Scripts
+jobs:
+  test-curl:
+    name: Test Scripts
+    runs-on: ubuntu-latest
+    steps:  
+    - run: sh -c "$(curl -LsSf https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref }}/tools/install.sh)"
+  test-checkout:
+    name: Test Scripts
+    runs-on: ubuntu-latest
+    steps:  
+    - uses: actions/checkout@v2
+    - run: sh ./tools/sudoers/update/command.sh
